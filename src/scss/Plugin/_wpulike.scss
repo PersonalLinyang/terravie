@@ -1,0 +1,107 @@
+.wpulike {
+  padding: 0;
+  
+  &-customize-area {
+    float: left;
+    
+    @include mq(pc) {
+      margin-top: remPC(6);
+      margin-right: remPC(10);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(5);
+      margin-right: vw(10);
+    }
+  }
+  
+  &-default {
+    padding: 0 !important;
+    font-size: 0;
+    
+    .wp_ulike_put_image {
+      &:before {
+        content: "";
+        position: absolute;
+        background-image: url('../../assets/img/common/cool-bg.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        top: 0;
+        
+        @include mq(pc) {
+          width: remPC(13.8);
+          height: remPC(22);
+          left: remPC(7.74);
+        }
+        
+        @include mq(sp) {
+          width: vw(13.8);
+          height: vw(22);
+          left: vw(7.74);
+        }
+      }
+      
+      &:after {
+        content: 'いいね!' !important;
+        font-family: $kozgo_pr6n_b;
+        white-space: nowrap !important;
+        background: none !important;
+        color: #FFF !important;
+        width: auto !important;
+        height: auto !important;
+        transform: translateY(-50%) !important;
+        
+        @include mq(pc) {
+          font-size: remPC(13) !important;
+          line-height: remPC(17) !important;
+          left: remPC(29.01) !important;
+        }
+        
+        @include mq(sp) {
+          font-size: vw(13) !important;
+          line-height: vw(17) !important;
+          left: vw(29.01) !important;
+        }
+      }
+      
+      &.wp_ulike_btn_is_active:after {
+        filter: none !important;
+      }
+    }
+    
+    .count-box {
+      @include mq(pc) {
+        font-size: remPC(13) !important;
+        line-height: remPC(22) !important;
+      }
+      
+      @include mq(sp) {
+        font-size: vw(13) !important;
+        line-height: vw(22) !important;
+      }
+    }
+  }
+  
+  .wp_ulike_btn {
+    background-color: #005DAA !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    
+    @include mq(pc) {
+      border-radius: remPC(4) !important;
+      width: remPC(86) !important;
+      height: remPC(22) !important;
+      background-position: top remPC(5) left remPC(12.84);
+      background-size: remPC(14.77);
+    }
+    
+    @include mq(sp) {
+      border-radius: vw(4) !important;
+      width: vw(86) !important;
+      height: vw(22) !important;
+      background-position: top vw(5) left vw(12.84);
+      background-size: vw(14.77);
+    }
+  }
+}

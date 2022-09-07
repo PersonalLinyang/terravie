@@ -1,0 +1,11 @@
+main {
+  position: relative;
+  
+  @include mq(pc) {
+    padding-top: remPC(100);
+  }
+
+  @include mq(sp) {
+    padding-top: vw(44);
+  }
+}

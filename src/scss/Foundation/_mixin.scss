@@ -1,0 +1,321 @@
+//メディアクエリをmixin化
+$breakpoints: (
+    'msp': 'only screen and (max-width: 576px)',
+    'sp': 'only screen and (max-width: 768px)',
+    'max960': 'print,screen and (max-width: 960px)',
+    'tb': 'print,screen and (max-width: 1280px)',
+    'pc': 'print,screen and (min-width: 769px)'
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin fixed {
+    .is-fixed & {
+        @content;
+    }
+}
+
+
+//可変vw
+@function vwPC($target_px){
+    @return $target_px / 1366 * 100vw;
+}
+
+@function vw($target_px){
+    @return $target_px / 375 * 100vw;
+}
+
+// rem
+$baseFontSize: 16;
+  @function rem($pixels) {
+    @return $pixels / $baseFontSize * 1rem;
+}
+// pc
+$baseFontSizePC: 16;
+  @function remPC($pixels) {
+    @return $pixels / $baseFontSizePC * 1rem;
+}
+
+// 破線
+
+@mixin border-dashed {
+  content: "";
+      background: url(../img/common/dot_row.svg);
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+}
+
+@mixin dashed ($w : 5px,$m : 10px) {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background-image: linear-gradient(to right, $color_gray, $color_gray $w, transparent $w, transparent $m);
+    background-size: $m 1px;
+    background-repeat: repeat-x;
+}
+
+
+
+// やじるし：↑
+
+@mixin arrow_top_border($w: 15px,$h: 15px) {
+    content: "";
+    display: inline-block;
+    width: $w;
+    height: $h;
+    border: 0px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    transform: rotate(-45deg);
+    @content;
+}
+
+
+// やじるし：下↓
+
+@mixin arrow_bottom_border($w: 15px,$h: 15px) {
+    content: "";
+    display: inline-block;
+    width: $w;
+    height: $h;
+    border: 0px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    transform: rotate(-225deg);
+    @content;
+}
+
+// やじるし　◀
+
+@mixin arrow_right($w: 15px,$h: 15px,$c: currentColor) {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 0px;
+  border: $w solid transparent;
+  border-right: $h solid $c;
+  @content;
+}
+
+// やじるし：＜
+
+@mixin arrow_left_border($w: 15px,$h: 15px,$s: 2px) {
+  content: "";
+  display: inline-block;
+  width: $w;
+  height: $h;
+  border: 0px;
+  border-top: solid $s;
+  border-right: solid $s;
+  transform: rotate(-135deg);
+  @content;
+}
+
+
+// やじるし：▶
+
+@mixin arrow_right($w: 15px,$h: 15px,$c: currentColor) {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 0px;
+    border: $w solid transparent;
+    border-left: $h solid $c;
+    @content;
+}
+
+// やじるし：＞
+
+@mixin arrow_right_border($w: 15px,$h: 15px,$s: 2px) {
+  content: "";
+  display: inline-block;
+  width: $w;
+  height: $h;
+  border: 0px;
+  border-top: solid $s;
+  border-right: solid $s;
+  transform: rotate(45deg);
+  @content;
+}
+
+// やじるし：▼
+
+@mixin arrow_bottom($w: 15px,$h: 15px,$c: Currentcolor) {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 0px;
+    border: $w solid transparent;
+    border-top: $h solid $c;
+    @content;
+}
+
+// 線：ー
+
+@mixin line($w: 20px,$h: 1px,$c: $color_text) {
+    content: "";
+    display: inline-block;
+    width: $w;
+    border-top: $h solid $c;
+    @content;
+}
+
+// 下線
+// ----
+
+@mixin underline($b:3px) {
+  content: "";
+  border-bottom: 1px solid;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @content;
+}
+
+// 画像
+
+@mixin icon_img($w: 15px,$h: 15px,$i: "assets/img/common/logo.svg") {
+    content: "";
+    display: inline-block;
+    background: url($i) top center/cover;
+    width: $w;
+    height: $h;
+    @content;
+}
+
+// リンク関係---------------------------------------
+
+@mixin hover_text-underline {
+    transition: .3s ease-in-out;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin hover_underline($b:3px) {
+    position: relative;
+    &::after {
+        content: "";
+        border-bottom: $b solid;
+        position: absolute;
+        right: 0;
+        width: calc(100% - 1em);
+        bottom: 10px;
+        transform: scaleX(0);
+        transition: .2s ease;
+        transform-origin: 0 0;
+    }
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+    @content;
+}
+
+@mixin hover_opacity($c : .7) {
+    transition: .3s ease-in-out;
+    &:hover {
+        opacity: $c;
+    }
+}
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// * hack IE
+$hack-ie11: "*::-ms-backdrop";
+
+@mixin hack-ie($hack-ver:'') {
+
+  // * IE8 hack
+  @if $hack-ver=="ie8" {
+    @media \0screen {
+      @content;
+    }
+  }
+
+  // * IE9-10 hack(add propary \9)
+  @else if $hack-ver=="ie9-10" {
+    @media all and (min-width:0\0) {
+      @content;
+    }
+  }
+
+  // * IE10 hack(add propary \9)
+  @else if $hack-ver=="ie10" {
+    @media all and (-ms-high-contrast:none\0) {
+      @content;
+    }
+  }
+
+  // * IE11 hack(add selector *::-ms-backdrop)
+  @else if $hack-ver=="ie11" {
+    @media all and (-ms-high-contrast:none\0) {
+      @content;
+    }
+  }
+}
+
+// 長体
+// 左寄せのテキスト
+
+@mixin text-narrow-left-85{
+  display: inline-block;
+  transform: scale(0.85, 1);
+  letter-spacing: .25em;
+  transform-origin: top left;
+  width: 117.6470588235294%;
+  // display: none!important;
+}
+
+@mixin text-narrow-left-90{
+  display: inline-block;
+  transform: scale(0.9, 1);
+  transform-origin: top left;
+  width: 125%;
+  // display: none!important;
+}
+
+// 中央寄せのテキスト
+@mixin text-narrow-center-85 {
+  display: inline-block;
+  transform: scale(0.85, 1);
+  letter-spacing: .25em;
+  // display: none!important;
+}
+
+@mixin text-narrow-center-90{
+  display: block;
+  transform: scale(0.9, 1);
+  // display: none!important;
+}
+
+@mixin sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

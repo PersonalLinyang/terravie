@@ -1,0 +1,280 @@
+.footer {
+  &-banner {
+    background-image: url('../../assets/img/common/footer-bg.jpg');
+    background-repeat: repeat;
+    text-align: center;
+    
+    @include mq(pc) {
+      background-size: remPC(20);
+    }
+    
+    @include mq(sp) {
+      background-size: vw(20);
+    }
+    
+    &-inner {
+      display: inline-block;
+      overflow: hidden;
+      
+      @include mq(pc) {
+        padding: remPC(60) 0;
+      }
+      
+      @include mq(sp) {
+        padding: vw(10) 0;
+      }
+    }
+    
+    &-item {
+      @include mq(pc) {
+        float: left;
+        margin: 0 remPC(40);
+        width: remPC(320);
+        border-radius: rmPC(10);
+      }
+      
+      @include mq(sp) {
+        margin: vw(20) 0;
+        width: vw(320);
+        border-radius: vw(10);
+      }
+      
+      img {
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+      }
+    }
+  }
+  
+  &-search {
+    @include mq(pc) {
+      display: none;
+    }
+    
+    @include mq(sp) {
+      margin: vw(51) auto vw(40);
+      width: vw(320);
+      position: relative;
+    }
+    
+    &-input {
+      border: 1px solid #A6A6A6;
+      font-family: $yugo_m;
+      
+      @include mq(sp) {
+        border-radius: vw(20);
+        width: vw(320);
+        height: vw(40);
+        font-size: vw(14);
+        line-height: vw(40);
+        padding-left: vw(46.17);
+        padding-right: vw(20);
+      }
+    }
+    
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 100;
+      background-size: 100%;
+      
+      @include mq(sp) {
+        width: vw(19.99);
+        height: vw(20);
+        top: vw(10);
+        left: vw(16.7);
+        background-image: url('../../assets/img/common/search.svg');
+      }
+    }
+  }
+  
+  &-map1 {
+    @include mq(pc) {
+      margin-top: remPC(57);
+      text-align: center;
+    }
+    
+    &-inner {
+      @include mq(pc) {
+        display: inline-block;
+        overflow: hidden;
+      }
+    }
+    
+    &-item {
+      @include mq(pc) {
+        float: left;
+        margin: remPC(10);
+        display: inline-block;
+        overflow: hidden;
+        width: remPC(192);
+        height: remPC(39);
+        border-bottom: 1px solid #000;
+        max-width: calc(20% - 20px);
+      }
+      
+      @include mq(sp) {
+        height: vw(40);
+        border-bottom: 1px solid #CECECE;
+      }
+      
+      &-inner {
+        @include mq(pc) {
+          overflow: hidden;
+          display: inline-block;
+        }
+      }
+    }
+    
+    &-image {
+      @include mq(pc) {
+        float: left;
+      }
+      
+      @include mq(sp) {
+        display: none;
+      }
+      
+      &1 {
+        @include mq(pc) {
+          width: remPC(24.58);
+          margin-top: remPC(1);
+        }
+      }
+      
+      &2 {
+        @include mq(pc) {
+          width: remPC(25.14);
+        }
+      }
+      
+      &3 {
+        @include mq(pc) {
+          width: remPC(23.86);
+        }
+      }
+      
+      &4 {
+        @include mq(pc) {
+          width: remPC(21.2);
+          margin-top: remPC(0.5);
+        }
+      }
+      
+      &5 {
+        @include mq(pc) {
+          width: remPC(21.96);
+          margin-top: remPC(0.5);
+        }
+      }
+    }
+    
+    &-text {
+      font-family: $kozgo_pr6n_b;
+      
+      @include mq(pc) {
+        float: left;
+        margin-top: remPC(2.61);
+        margin-left: remPC(10);
+        font-size: remPC(16);
+        line-height: remPC(16);
+        font-weight: 700;
+      }
+      
+      @include mq(sp) {
+        padding-left: vw(20);
+        font-size: vw(14);
+        line-height: vw(40);
+        font-family: $yugo_m;
+      }
+    }
+  }
+  
+  &-controller {
+    @include mq(pc) {
+      overflow: hidden;
+      margin: remPC(35) auto 0;
+      max-width: remPC(1040);
+    }
+  }
+  
+  &-map2 {
+    @include mq(pc) {
+      float: left;
+      margin-top: remPC(6.2);
+    }
+    
+    &-item {
+      font-family: $yugo_m;
+      
+      @include mq(pc) {
+        float: left;
+        margin-right: remPC(15);
+        padding-right: remPC(15);
+        overflow: hidden;
+        border-right: 1px solid #333333;
+        font-size: remPC(15);
+        line-height: remPC(24);
+        letter-spacing: 0.05em;
+      }
+      
+      @include mq(sp) {
+        height: vw(40);
+        border-bottom: 1px solid #CECECE;
+        padding-left: vw(20);
+        font-size: vw(14);
+        line-height: vw(40);
+      }
+    }
+  }
+  
+  &-sns {
+    @include mq(pc) {
+      float: right;
+      height: remPC(68);
+    }
+    
+    @include mq(sp) {
+      padding: vw(32.68) 0 vw(31.32);
+      text-align: center;
+    }
+    
+    &-inner {
+      @include mq(sp) {
+        display: inline-block;
+      }
+    }
+    
+    &-item {
+      float: right;
+      
+      @include mq(pc) {
+        width: remPC(26);
+        margin-left: remPC(10);
+      }
+      
+      @include mq(sp) {
+        width: vw(26);
+        margin: 0 vw(5);
+      }
+    }
+  }
+  
+  &-company {
+    background: #F9DC24;
+    text-align: center;
+    color: #FFF;
+    font-family: $yugo_m;
+    
+    @include mq(pc) {
+      height: remPC(80);
+      line-height: remPC(80);
+      font-size: remPC(14);
+    }
+    
+    @include mq(sp) {
+      height: vw(40);
+      line-height: vw(40);
+      font-size: vw(12);
+    }
+  }
+}

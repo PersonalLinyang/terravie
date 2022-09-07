@@ -1,0 +1,40 @@
+.error {
+  &-mv {
+    @include mq(pc) {
+      height: remPC(150);
+    }
+    
+    @include mq(sp) {
+      height: vw(80);
+    }
+  }
+  
+  &-main {
+    @include mq(pc) {
+      margin: 0 auto remPC(60);
+      max-width: remPC(800);
+    }
+    
+    @include mq(sp) {
+      margin: 0 auto vw(40);
+      max-width: vw(335);
+    }
+  }
+
+  &-text {
+    font-family: $yugo_m;
+    text-align: center;
+    
+    @include mq(pc) {
+      font-size: remPC(14);
+      line-height: remPC(22.4);
+      margin-bottom: remPC(22.4);
+    }
+    
+    @include mq(sp) {
+      font-size: vw(14);
+      line-height: vw(22.4);
+      margin-bottom: vw(22.4);
+    }
+  }
+}

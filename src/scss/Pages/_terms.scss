@@ -1,0 +1,41 @@
+.terms {
+  &-mv {
+    @include mq(pc) {
+      background-image: url('../../assets/img/terms/terms-bg-pc.jpg');
+      background-position: top remPC(-140) left 0;
+    }
+    
+    @include mq(sp) {
+      background-image: url('../../assets/img/terms/terms-bg-sp.jpg');
+      background-position: top vw(-10) left 0;
+    }
+  }
+  
+  &-main {
+    @include mq(pc) {
+      margin: 0 auto remPC(104.34);
+      max-width: remPC(800);
+    }
+    
+    @include mq(sp) {
+      margin: 0 auto vw(69.86);
+      max-width: vw(335);
+    }
+    
+    p {
+      font-family: $yugo_m;
+      
+      @include mq(pc) {
+        font-size: remPC(14);
+        line-height: remPC(22.4);
+        margin-top: remPC(22.4);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(14);
+        line-height: vw(22.4);
+        margin-top: vw(22.4);
+      }
+    }
+  }
+}

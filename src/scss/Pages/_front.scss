@@ -1,0 +1,470 @@
+.front {
+  &-pickup {
+    position: relative;
+    
+    @include mq(pc) {
+      margin: remPC(40) auto remPC(37.42);
+      padding: 0 remPC(20);
+      max-width: remPC(1101.46);
+      overflow: hidden;
+    }
+    
+    @include mq(sp) {
+      margin: vw(24.2) auto vw(50);
+    }
+    
+    &-date {
+      font-family: $yugo_b;
+      color: #8C8C8C;
+      
+      @include mq(pc) {
+        position: absolute;
+        top: remPC(16);
+        right: remPC(30.73);
+        text-align: right;
+        font-size: remPC(14);
+      }
+      
+      @include mq(sp) {
+        padding-left: vw(16);
+        font-size: vw(12);
+      }
+      
+      .large {
+        color: #070304;
+        
+        @include mq(pc) {
+          font-size: remPC(22);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(18);
+        }
+      }
+      
+      .red {
+        color: #EE6557;
+      }
+    }
+    
+    &-number {
+      position: absolute;
+      font-family: $futura_condensed;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 10;
+      
+      @include mq(pc) {
+        top: remPC(69.09);
+        right: remPC(30.73);
+        width: remPC(199.3);
+        height: remPC(104);
+        background-image: url('../../assets/img/front/front-pickup-number-bg-pc.png');
+        padding-top: remPC(23.28);
+        padding-left: remPC(41.53);
+        font-size: remPC(32);
+        line-height: remPC(43);
+      }
+      
+      @include mq(sp) {
+        top: vw(1.8);
+        left: vw(265.37);
+        width: vw(99.65);
+        height: vw(52);
+        background-image: url('../../assets/img/front/front-pickup-number-bg-sp.png');
+        padding-top: vw(12.14);
+        padding-left: vw(20.26);
+        font-size: vw(16);
+        line-height: vw(21);
+      }
+    }
+    
+    &-left {
+      position: relative;
+      
+      @include mq(pc) {
+        float: left;
+        padding-top: remPC(15.97);
+        width: calc(100% - 369.73px);
+      }
+      
+      @include mq(tb) {
+        width: calc(100% - 295.78px);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(9.78);
+        width: 100%;
+      }
+      
+      &-title {
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        font-family: $futura_pt_b;
+        background: #FFF;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        @include mq(pc) {
+          width: remPC(440);
+          border-radius: remPC(10);
+          line-height: remPC(80);
+          font-size: remPC(42);
+        }
+        
+        @include mq(sp) {
+          width: vw(240);
+          border-bottom-left-radius: vw(8);
+          border-bottom-right-radius: vw(8);
+          line-height: vw(25.98);
+          font-size: vw(24);
+          margin-top: vw(-4);
+          padding-top: vw(4);
+        }
+      }
+    }
+    
+    &-right {
+      @include mq(pc) {
+        float: right;
+        width: remPC(280);
+        margin-right: remPC(30.73);
+        margin-top: remPC(174.03);
+      }
+      
+      @include mq(sp) {
+        margin: vw(3) auto 0;
+        width: vw(335);
+      }
+      
+      &-title {
+        font-family: $kozgo_pr6n_b;
+        
+        @include mq(pc) {
+          font-size: remPC(20);
+          line-height: remPC(27);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(17);
+          line-height: vw(22);
+        }
+      }
+      
+      &-content {
+        font-family: $yugo_m;
+        
+        @include mq(pc) {
+          font-size: remPC(15);
+          line-height: remPC(25.6);
+          margin-top: remPC(14.85);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(13);
+          line-height: vw(18.2);
+          margin-top: vw(11.09);
+        }
+      }
+      
+      &-taglist {
+        overflow: hidden;
+        
+        @include mq(pc) {
+          margin-top: remPC(2.14);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(22.67);
+        }
+      }
+      
+      &-button {
+        overflow: hidden;
+        
+        @include mq(pc) {
+          margin-top: remPC(8.74);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(6.14);
+        }
+      }
+      
+      &-link {
+        position: relative;
+        border: 1px solid #F9DC24;
+        font-family: $kozgo_pr6n_b;
+        text-align: center;
+        
+        @include mq(pc) {
+          margin-top: remPC(34.69);
+          height: remPC(44);
+          font-size: remPC(14);
+          line-height: remPC(44);
+          border-radius: remPC(15);
+        }
+        
+        @include mq(sp) {
+          margin: vw(20) auto 0;
+          width: vw(240);
+          height: vw(44);
+          font-size: vw(14);
+          line-height: vw(44);
+          border-radius: vw(15);
+        }
+        
+        a {
+          color: #3D3C3D;
+          
+          @include mq(pc) {
+            padding-right: remPC(12);
+          }
+          
+          @include mq(sp) {
+            padding-right: vw(12);
+          }
+        }
+        
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          
+          @include mq(pc) {
+            border-top: remPC(3.75) solid transparent;
+            border-bottom: remPC(3.75) solid transparent;
+            border-left: remPC(3.75) solid #4D4D4D;
+            right: remPC(41.47);
+          }
+          
+          @include mq(sp) {
+            border-top: vw(3.75) solid transparent;
+            border-bottom: vw(3.75) solid transparent;
+            border-left: vw(3.75) solid #4D4D4D;
+            right: remPC(21.46);
+          }
+        }
+        
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          
+          @include mq(pc) {
+            border-top: remPC(3.75) solid transparent;
+            border-bottom: remPC(3.75) solid transparent;
+            border-left: remPC(3.75) solid #FFF;
+            right: remPC(42.97);
+          }
+          
+          @include mq(sp) {
+            border-top: vw(3.75) solid transparent;
+            border-bottom: vw(3.75) solid transparent;
+            border-left: vw(3.75) solid #FFF;
+            right: remPC(22.96);
+          }
+        }
+      }
+    }
+  }
+  
+  &-map {
+    background: #F9DC24;
+    
+    @include mq(pc) {
+      margin-top: remPC(10);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(8);
+    }
+    
+    &-inner {
+      overflow: hidden;
+      
+      @include mq(pc) {
+        max-width: remPC(980.01);
+        margin: 0 auto;
+      }
+    }
+    
+    &-item {
+      border-left: 1px solid #FFF;
+      float: left;
+      position: relative;
+      
+      @include mq(pc) {
+        width: calc((100% - 4px) / 3);
+        height: remPC(48);
+      }
+      
+      @include mq(sp) {
+        width: calc((100% - 2px) / 3);
+        height: vw(48);
+      }
+      
+      &:last-child {
+        @include mq(pc) {
+          border-right: 1px solid #FFF;
+        }
+      }
+      
+      &:first-child {
+        @include mq(sp) {
+          border-left: 0;
+        }
+      }
+    }
+    
+    &-image {
+      position: absolute;
+      left: 50%;
+      
+      &1 {
+        @include mq(pc) {
+          width: remPC(22.12);
+          top: remPC(15.34);
+          transform: translateX(remPC(-47.945));
+        }
+        
+        @include mq(sp) {
+          width: vw(19.66);
+          top: vw(16.34);
+          transform: translateX(vw(-38.9));
+        }
+      }
+      
+      &2 {
+        @include mq(pc) {
+          width: remPC(21.71);
+          top: remPC(15.34);
+          transform: translateX(remPC(-55.635));
+        }
+        
+        @include mq(sp) {
+          width: vw(19.43);
+          top: vw(15.49);
+          transform: translateX(vw(-42.37));
+        }
+      }
+      
+      &3 {
+        @include mq(pc) {
+          width: remPC(21.7);
+          top: remPC(15.34);
+          transform: translateX(remPC(-82.985));
+        }
+        
+        @include mq(sp) {
+          width: vw(19.53);
+          top: vw(15);
+          transform: translateX(vw(-43.42));
+        }
+      }
+    }
+    
+    &-text {
+      position: absolute;
+      left: 50%;
+      font-family: $kozgo_pr6n_b;
+      
+      @include mq(pc) {
+        line-height: remPC(21);
+        font-size: remPC(16);
+        top: remPC(14.16);
+      }
+      
+      @include mq(sp) {
+        line-height: vw(16);
+        font-size: vw(12);
+        top: vw(16.16);
+      }
+      
+      &1 {
+        @include mq(pc) {
+          transform: translateX(remPC(-16.065));
+        }
+        
+        @include mq(sp) {
+          transform: translateX(vw(-9.47));
+        }
+      }
+      
+      &2 {
+        @include mq(pc) {
+          transform: translateX(remPC(-24.375));
+        }
+        
+        @include mq(sp) {
+          transform: translateX(vw(-13.4));
+        }
+      }
+      
+      &3 {
+        @include mq(pc) {
+          transform: translateX(remPC(-53.005));
+        }
+        
+        @include mq(sp) {
+          top: vw(8.59);
+          transform: translateX(vw(-15.61));
+        }
+      }
+    }
+  }
+  
+  &-topic {
+    background: #FAF5DC;
+    
+    @include mq(pc) {
+      padding: remPC(54) remPC(20) remPC(99.93);
+    }
+    
+    @include mq(sp) {
+      padding: vw(54) 0 vw(53.56);
+    }
+    
+    &-inner {
+      position: relative;
+      margin: 0 auto;
+      border-top: 1px solid #000;
+      
+      @include mq(pc) {
+        padding-top: remPC(26);
+        max-width: remPC(1040);
+      }
+      
+      @include mq(sp) {
+        padding: vw(36.08) 0 vw(30);
+        max-width: vw(335);
+      }
+    }
+    
+    &-topic {
+      position: absolute;
+      background: #FAF5DC;
+      text-align: center;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-family: $futura_pt_b;
+      
+      @include mq(pc) {
+        width: remPC(128);
+        font-size: remPC(32);
+      }
+      
+      @include mq(sp) {
+        width: vw(128);
+        font-size: vw(32);
+      }
+    }
+  }
+}

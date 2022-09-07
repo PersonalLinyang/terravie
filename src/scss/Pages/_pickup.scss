@@ -1,0 +1,183 @@
+.pickup {
+  &-top {
+    font-family: $futura_pt_b;
+    text-align: center;
+    
+    @include mq(pc) {
+      margin-top: remPC(10);
+      height: remPC(91.06);
+      font-size: remPC(30);
+      line-height: remPC(91.06);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(8);
+      font-size: vw(24);
+      line-height: vw(31);
+      padding: vw(16) 0;
+    }
+  }
+  
+  &-postlist {
+    background: #F9F0D1;
+    
+    @include mq(pc) {
+      padding: remPC(53.02) remPC(20) 0;
+    }
+    
+    @include mq(sp) {
+      padding: 1px 0 vw(20);
+    }
+    
+    &-inner {
+      @include mq(sp) {
+        max-width: vw(355);
+      }
+    }
+  }
+  
+  &-item {
+    @include mq(pc) {
+      border-radius: remPC(10);
+    }
+    
+    @include mq(sp) {
+      border-radius: vw(20);
+    }
+  }
+  
+  &-header {
+    overflow: hidden;
+    
+    @include mq(pc) {
+      height: remPC(49.5);
+    }
+    
+    @include mq(sp) {
+      height: vw(49.5);
+    }
+  }
+  
+  &-number {
+    float: left;
+    font-family: $futura_condensed;
+    color: #070304;
+    
+    @include mq(pc) {
+      font-size: remPC(24);
+      line-height: remPC(32);
+      padding-top: remPC(10.13);
+      padding-left: remPC(11.51);
+    }
+    
+    @include mq(sp) {
+      font-size: vw(24);
+      line-height: vw(32);
+      padding-top: vw(10.13);
+      padding-left: vw(11.51);
+    }
+  }
+  
+  &-date {
+    float: right;
+    font-family: $kozgo_pr6n_r;
+    color: #070304;
+    
+    @include mq(pc) {
+      font-size: remPC(13);
+      line-height: remPC(17);
+      padding-top: remPC(22.13);
+      padding-right: remPC(28);
+    }
+    
+    @include mq(sp) {
+      font-size: vw(13);
+      line-height: vw(17);
+      padding-top: vw(22.13);
+      padding-right: vw(28);
+    }
+  }
+  
+  &-image {
+    @include mq(pc) {
+      padding: 0 remPC(2.44);
+    }
+    
+    @include mq(sp) {
+      padding: 0 vw(2.44);
+    }
+  }
+  
+  &-title {
+    font-family: $yugo_b;
+    
+    @include mq(pc) {
+      font-size: remPC(17);
+      line-height: remPC(22);
+      padding: remPC(15) remPC(15) 0;
+    }
+    
+    @include mq(sp) {
+      font-size: vw(17);
+      line-height: vw(22);
+      padding: vw(15) vw(15) 0;
+    }
+  }
+  
+  &-text {
+    font-family: $yugo_m;
+    
+    @include mq(pc) {
+      font-size: remPC(13);
+      line-height: remPC(18.2);
+      padding: remPC(11) remPC(10) 0;
+    }
+    
+    @include mq(sp) {
+      font-size: vw(13);
+      line-height: vw(18.2);
+      padding: vw(11) vw(10) 0;
+    }
+  }
+  
+  &-taglist {
+    overflow: hidden;
+    
+    @include mq(pc) {
+      padding: remPC(4.67) remPC(11.56) 0;
+    }
+    
+    @include mq(sp) {
+      padding: vw(4.67) vw(11.56) 0;
+    }
+  }
+  
+  &-button {
+    overflow: hidden;
+    
+    @include mq(pc) {
+      padding: remPC(11.14) remPC(10) remPC(22.5);
+    }
+    
+    @include mq(sp) {
+      padding: vw(11.14) vw(10) vw(22.5);
+    }
+  }
+  
+  &-pager {
+    @include mq(pc) {
+      background: #F9F0D1;
+      padding: remPC(50) 0 remPC(53.66);
+    }
+    
+    @include mq(sp) {
+      padding: vw(38.17) 0 vw(40.27);
+    }
+    
+    &-inner {
+      @include mq(sp) {
+        max-width: vw(355);
+      }
+    }
+  }
+}

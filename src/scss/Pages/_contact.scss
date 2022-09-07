@@ -1,0 +1,183 @@
+.contact {
+  &-mv {
+    @include mq(pc) {
+      background-image: url('../../assets/img/contact/contact-bg-pc.jpg');
+      background-position: top remPC(-150) left 0;
+    }
+    
+    @include mq(sp) {
+      background-image: url('../../assets/img/contact/contact-bg-sp.jpg');
+      background-position: top vw(-20) left 0;
+    }
+  }
+  
+  &-form {
+    background: #FAF5DC;
+    
+    @include mq(pc) {
+      padding: remPC(48) 0 remPC(70);
+    }
+    
+    @include mq(sp) {
+      padding: vw(14) 0 vw(60);
+    }
+    
+    &-inner {
+      margin: 0 auto;
+      
+      @include mq(pc) {
+        max-width: remPC(665.46);
+      }
+      
+      @include mq(sp) {
+        max-width: vw(335);
+      }
+    }
+    
+    &-line {
+      @include mq(pc) {
+        overflow: hidden;
+        margin-top: remPC(22);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(23.2);
+      }
+    }
+    
+    &-item {
+      font-family: $yugo_b;
+      letter-spacing: 0.05em;
+      
+      @include mq(pc) {
+        float: left;
+        width: 155.23px;
+        font-size: remPC(15);
+        line-height: remPC(48);
+        padding-left: remPC(3.96);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(15);
+        line-height: vw(20);
+        padding-left: vw(8);
+      }
+    }
+    
+    &-info {
+      font-family: $yugo_b;
+      
+      @include mq(pc) {
+        float: left;
+        width: calc(100% - 155.23px);
+        font-size: remPC(15);
+        line-height: remPC(48);
+      }
+      
+      @include mq(sp) {
+        font-size: vw(15);
+        line-height: vw(48);
+        margin-top: vw(8.8);
+      }
+    }
+    
+    &-input {
+      font-family: $yugo_b;
+      border: 1px solid #F9DC24;
+      
+      @include mq(pc) {
+        width: calc(100% - 15.23px);
+        padding: 0 remPC(23.36);
+        height: remPC(48);
+        font-size: remPC(16);
+        line-height: remPC(48);
+        border-radius: remPC(8);
+      }
+      
+      @include mq(sp) {
+        width: 100%;
+        padding: 0 vw(23.36);
+        height: vw(48);
+        font-size: vw(15);
+        line-height: vw(48);
+        border-radius: vw(8);
+      }
+    }
+    
+    &-textarea {
+      resize: none;
+      
+      @include mq(pc) {
+        height: remPC(148);
+        line-height: remPC(26);
+        padding-top: remPC(11);
+        padding-bottom: remPC(11);
+      }
+      
+      @include mq(sp) {
+        height: vw(148);
+        line-height: vw(26);
+        padding-top: vw(11);
+        padding-bottom: vw(11);
+      }
+    }
+    
+    &-submit {
+      @include mq(pc) {
+        margin: remPC(30) auto;
+      }
+      
+      @include mq(sp) {
+        margin: vw(20) auto vw(20);
+      }
+    }
+  }
+}
+
+.wpcf7-submit {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 0.9375rem;
+  font-family: $kozgo_pr6n_b;
+  cursor: pointer;
+}
+
+.wpcf7-not-valid-tip {
+  font-family: $yugo_b;
+  color: #EE6557;
+  
+  @include mq(pc) {
+    font-size: remPC(15);
+    line-height: remPC(20);
+  }
+  
+  @include mq(sp) {
+    font-size: vw(15);
+    line-height: vw(20);
+  }
+}
+
+.wpcf7-response-output {
+  font-family: $yugo_b;
+  color: #EE6557;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+  
+  @include mq(pc) {
+    font-size: remPC(15);
+    line-height: remPC(20);
+  }
+  
+  @include mq(sp) {
+    font-size: vw(15);
+    line-height: vw(20);
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  color: #49C89A !important;
+}

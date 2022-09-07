@@ -1,0 +1,84 @@
+.company {
+  &-mv {
+    @include mq(pc) {
+      background-image: url('../../assets/img/company/company-bg-pc.jpg');
+      background-position: top remPC(-270) left 0;
+    }
+    
+    @include mq(sp) {
+      background-image: url('../../assets/img/company/company-bg-sp.jpg');
+      background-position: top vw(-50) left 0;
+    }
+  }
+  
+  &-main {
+    @include mq(pc) {
+      margin: 0 auto remPC(73.69);
+      max-width: remPC(841.4);
+    }
+    
+    @include mq(sp) {
+      margin: 0 auto vw(59.92);
+      max-width: vw(335);
+    }
+  }
+  
+  &-table {
+    border-collapse: collapse;
+    border: 0;
+    
+    tr {
+      &:nth-child(2n+1) {
+        background: #F5F0CB;
+      }
+    }
+    
+    th {
+      font-family: $yugo_b;
+      
+      @include mq(pc) {
+        padding: remPC(14) 0 remPC(14) remPC(16);
+        width: 125px;
+        font-size: remPC(15);
+        line-height: remPC(20);
+      }
+      
+      @include mq(sp) {
+        padding: vw(14) 0 vw(14) vw(16);
+        font-size: vw(15);
+        line-height: vw(20);
+        width: vw(91);
+      }
+    }
+    
+    td {
+      font-family: $yugo_m;
+      
+      @include mq(pc) {
+        padding: remPC(14) remPC(16);
+        calc: calc(100% - 125px);
+        font-size: remPC(15);
+        line-height: remPC(20);
+      }
+      
+      @include mq(sp) {
+        padding: vw(14) vw(16);
+        font-size: vw(15);
+        line-height: vw(20);
+        width: vw(244);
+      }
+    }
+  }
+  
+  &-map {
+    font-size: 0;
+    
+    @include mq(pc) {
+      margin-top: remPC(43);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(5);
+    }
+  }
+}

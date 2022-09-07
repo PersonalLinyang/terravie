@@ -1,0 +1,31 @@
+// FLOCSS
+// https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0
+
+// Foundation
+
+@import "Foundation/variable";
+@import "Foundation/mixin";
+@import "Foundation/base";
+
+// Layout
+
+@import "Layout/header";
+@import "Layout/main";
+@import "Layout/footer";
+
+// Pages
+
+@import "Pages/common";
+@import "Pages/front";
+@import "Pages/single";
+@import "Pages/search";
+@import "Pages/pickup";
+@import "Pages/about";
+@import "Pages/magazine";
+@import "Pages/contact";
+@import "Pages/company";
+@import "Pages/terms";
+@import "Pages/404";
+
+// Plugin
+@import "Plugin/wpulike";

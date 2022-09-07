@@ -1,0 +1,280 @@
+.about {
+  &-main {
+    @include mq(pc) {
+      margin-top: remPC(60);
+    }
+    
+    @include mq(sp) {
+      background-image: linear-gradient(to bottom, #FFF 0, #FAF5DC 100%);
+      margin-top: vw(28);
+    }
+  }
+  
+  &-content {
+    @include mq(pc) {
+      background-image: url('../../assets/img/about/about-bg-pc.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: top;
+      padding-bottom: remPC(90);
+    }
+    
+    @include mq(sp) {
+      padding-bottom: vw(66);
+    }
+  }
+  
+  &-inner {
+    @include mq(pc) {
+      overflow: hidden;
+      max-width: remPC(1040);
+      margin: 0 auto;
+      padding-top: remPC(160);
+    }
+  }
+  
+  &-smartphone {
+    @include mq(pc) {
+      float: left;
+      width: 50%;
+      padding-right: remPC(60);
+      text-align: right;
+    }
+    
+    @include mq(sp) {
+      background-image: url('../../assets/img/about/about-bg-sp.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: top;
+      padding: vw(78) vw(40) 0;
+    }
+    
+    img {
+      @include mq(pc) {
+        max-width: remPC(295);
+      }
+    }
+  }
+  
+  &-info {
+    position: relative;
+    
+    @include mq(pc) {
+      float: left;
+      width: 50%;
+      height: remPC(780);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(-113);
+      height: vw(770);
+      overflow: hidden;
+    }
+    
+    &-title {
+      color: #222222;
+      letter-spacing: 0.05em;
+      text-align: center;
+      font-family: $tsukuardgothic;
+      font-weight: 700;
+      
+      @include mq(pc) {
+        margin-top: remPC(2.67);
+        font-size: remPC(51.45);
+        line-height: remPC(69);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(2.92);
+        font-size: vw(41);
+        line-height: vw(54);
+      }
+      
+      .small {
+        display: inline-block;
+        
+        @include mq(pc) {
+          margin-top: remPC(15.4);
+          margin-left: remPC(7.24);
+          font-size: remPC(37.65);
+          line-height: remPC(50);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(12.32);
+          margin-left: vw(5.54);
+          font-size: vw(30);
+          line-height: vw(40);
+        }
+      }
+      
+      &area {
+        position: absolute;
+        z-index: 2;
+        
+        @include mq(pc) {
+          top: remPC(84.53);
+          left: 50%;
+          transform: translateX(remPC(-160.93));
+          width: remPC(300);
+        }
+        
+        @include mq(sp) {
+          top: vw(231.54);
+          left: vw(61.54);
+          width: vw(250);
+        }
+      }
+    }
+    
+    &-subtitle {
+      color: #222222;
+      letter-spacing: 0.05em;
+      text-align: center;
+      font-family: $tsukuardgothic;
+      font-weight: 700;
+      position: relative;
+      
+      @include mq(pc) {
+        margin-top: remPC(10.37);
+        font-size: remPC(35.14);
+        line-height: remPC(47);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(2.21);
+        font-size: vw(28);
+        line-height: vw(37);
+      }
+      
+      .kana {
+        position: absolute;
+        
+        @include mq(pc) {
+          font-size: remPC(12.55);
+          line-height: remPC(17);
+          top: remPC(-8.86);
+        }
+        
+        @include mq(sp) {
+          font-size: vw(10);
+          line-height: vw(14);
+          top: vw(-7.18);
+        }
+        
+        &-ho {
+          @include mq(pc) {
+            left: remPC(72.69);
+          }
+          
+          @include mq(sp) {
+            left: vw(64.72);
+          }
+        }
+        
+        &-shi {
+          @include mq(pc) {
+            left: remPC(110.92);
+          }
+          
+          @include mq(sp) {
+            left: vw(95.5);
+          }
+        }
+        
+        &-inochi {
+          @include mq(pc) {
+            left: remPC(198.96);
+          }
+          
+          @include mq(sp) {
+            left: vw(165.65);
+          }
+        }
+      }
+    }
+    
+    &-text {
+      text-align: center;
+      color: #333333;
+      font-family: $yugo_m;
+      
+      @include mq(pc) {
+        margin: remPC(19.67) auto 0;
+        font-size: remPC(17.57);
+        line-height: remPC(35.14);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw(23.43);
+        font-size: vw(14);
+        line-height: vw(28);
+      }
+      
+      &area {
+        position: absolute;
+        z-index: 2;
+        
+        @include mq(pc) {
+          width: remPC(420.42);
+          top: remPC(323.95);
+          left: 50%;
+          transform: translateX(remPC(-213.91));
+        }
+        
+        @include mq(sp) {
+          top: vw(407.89);
+          width: 100%;
+        }
+      }
+    }
+    
+    &-image {
+      position: absolute;
+      z-index: 1;
+      
+      &1 {
+        @include mq(pc) {
+          width: remPC(84.6);
+          top: 0;
+          left: 50%;
+          transform: translateX(remPC(35.59));
+        }
+        
+        @include mq(sp) {
+          width: vw(67.41);
+          top: vw(157.57);
+          left: vw(218.86);
+        }
+      }
+      
+      &2 {
+        @include mq(pc) {
+          width: remPC(122.86);
+          top: remPC(134.23);
+          left: 0;
+        }
+        
+        @include mq(sp) {
+          width: vw(97.9);
+          top: vw(264.52);
+          left: vw(-16.68);
+        }
+      }
+      
+      &3 {
+        @include mq(pc) {
+          width: remPC(143.23);
+          top: remPC(184.81);
+          right: 0;
+        }
+        
+        @include mq(sp) {
+          width: vw(114.1);
+          top: vw(304.83);
+          left: vw(283.57);
+        }
+      }
+    }
+  }
+}

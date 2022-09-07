@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'KozGo Pr6N Regular';
+  src: url('../../assets/font/KozGoPro-Regular.otf') format('opentype');
+}
+$kozgo_pr6n_r: "KozGo Pr6N Regular";
+
+@font-face {
+  font-family: 'KozGo Pr6N Bold';
+  src: url('../../assets/font/KozGoPro-Bold.otf') format('opentype');
+}
+$kozgo_pr6n_b: "KozGo Pr6N Bold";
+
+@font-face {
+  font-family: 'Futura PT Bold';
+  src: url('../../assets/font/FuturaStd-Bold.otf') format('opentype');
+}
+$futura_pt_b: "Futura PT Bold";
+
+@font-face {
+  font-family: 'Futura Condensed ExtraBold';
+  src: url('../../assets/font/FuturaStd-CondensedExtraBd.otf') format('opentype');
+}
+$futura_condensed: "Futura Condensed ExtraBold";
+
+@font-face {
+  font-family: 'YuGo Medium';
+  src: url('../../assets/font/YuGothic-Medium.otf') format('opentype');
+}
+$yugo_m: "YuGo Medium";
+
+@font-face {
+  font-family: 'YuGo Bold';
+  src: url('../../assets/font/YuGothic-Bold.otf') format('opentype');
+}
+$yugo_b: "YuGo Bold";
+
+$tsukuardgothic: fot-tsukuardgothic-std,sans-serif;

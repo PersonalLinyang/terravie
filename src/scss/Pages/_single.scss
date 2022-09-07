@@ -1,0 +1,859 @@
+.single {
+  &-main {
+    @include mq(pc) {
+      background: #F5F0CB;
+      margin-top: remPC(10);
+      padding: remPC(50) remPC(40) remPC(70);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw(18);
+    }
+    
+    &-inner {
+      @include mq(pc) {
+        margin: 0 auto;
+        max-width: remPC(1200);
+        overflow: hidden;
+      }
+    }
+    
+    &-left {
+      @include mq(pc) {
+        background-image: url('../../assets/img/single/single-bg.jpg');
+        background-size: remPC(21);
+        background-repeat: repeat;
+        padding-bottom: remPC(71.62);
+        width: 70%;
+        float: left;
+      }
+    }
+    
+    &-date {
+      @include mq(pc) {
+        font-family: $kozgo_pr6n_b;
+        color: #7D7474;
+        font-size: remPC(18);
+        line-height: remPC(24);
+        padding: remPC(26.72) remPC(30.11) 0;
+      }
+      
+      @include mq(sp) {
+        font-family: $kozgo_pr6n_r;
+        color: #7A7A7A;
+        font-size: vw(13);
+        line-height: vw(17);
+        padding: vw(20.71) vw(18.16) 0;
+      }
+    }
+    
+    &-title {
+      font-family: $kozgo_pr6n_b;
+      
+      @include mq(pc) {
+        color: #050404;
+        font-size: remPC(24);
+        line-height: remPC(32);
+        padding: remPC(3.62) remPC(30.56) 0;
+      }
+      
+      @include mq(sp) {
+        color: #262727;
+        font-size: vw(18);
+        line-height: vw(25.6);
+        padding: vw(7.5) vw(18.16) 0;
+      }
+    }
+    
+    &-taglist {
+      @include mq(pc) {
+        padding: remPC(15.41) remPC(27.55) 0;
+      }
+      
+      @include mq(sp) {
+        padding: 0 vw(22.89) vw(19.59);
+      }
+    }
+    
+    &-thumbnail {
+      @include mq(pc) {
+        padding: remPC(25.39) remPC(30.1) 0;
+      }
+    }
+    
+    &-contentarea {
+      @include mq(sp) {
+        background-image: url('../../assets/img/single/single-bg.jpg');
+        background-size: vw(21);
+        background-repeat: repeat;
+      }
+    }
+    
+    &-shortmessage {
+      text-align: center;
+      
+      @include mq(pc) {
+        font-family: $kozgo_pr6n_b;
+        color: #050404;
+        font-size: remPC(14);
+        line-height: remPC(28);
+        padding: remPC(30.56) 0 remPC(26.44);
+        max-width: remPC(640);
+        margin: 0 auto;
+      }
+      
+      @include mq(sp) {
+        font-family: $yugo_b;
+        color: #262727;
+        font-size: vw(14);
+        line-height: vw(22.4);
+        padding: vw(31.16) vw(20) vw(20);
+      }
+    }
+    
+    &-profile {
+      background: #FFF;
+      position: relative;
+      
+      @include mq(pc) {
+        padding: 0 remPC(20);
+      }
+      
+      @include mq(sp) {
+        padding: vw(25.74) vw(20) vw(23.03);
+      }
+      
+      &-title {
+        @include mq(pc) {
+          color: #050404;
+          font-family: $kozgo_pr6n_b;
+          font-size: remPC(18);
+          line-height: remPC(24);
+        }
+        
+        @include mq(sp) {
+          display: none;
+        }
+      }
+      
+      &-topic {
+        font-family: $futura_pt_b;
+        position: absolute;
+        background: #FFF;
+        left: 50%;
+        z-index: 1;
+        white-space: nowrap;
+        
+        @include mq(pc) {
+          color: #050404;
+          padding: 0 remPC(7);
+          font-size: remPC(24);
+          line-height: remPC(31.01);
+          top: 0;
+          transform: translate(-50%, -50%);
+        }
+        
+        @include mq(sp) {
+          color: #070304;
+          padding: 0 vw(7);
+          font-size: vw(24);
+          line-height: vw(31.01);
+          transform: translateX(-50%);
+          top: vw(9.89);
+        }
+      }
+      
+      &-inner {
+        display: table;
+        width: 100%;
+        
+        @include mq(pc) {
+          margin: 0 auto;
+          max-width: remPC(640);
+          border-top: 1px solid #050404;
+          border-bottom: 1px solid #050404;
+          padding: remPC(19) remPC(20) remPC(20);
+        }
+        
+        @include mq(sp) {
+          border-top: 1px solid #070304;
+          border-bottom: 1px solid #070304;
+          padding: vw(22.2) 0 vw(20);
+        }
+      }
+      
+      &-left {
+        display: table-cell;
+        vertical-align: middle;
+        
+        @include mq(pc) {
+          width: remPC(140);
+          margin-top: remPC(0.8);
+          
+          &.writer {
+            border-radius: remPC(70);
+            
+            img {
+              border-radius: remPC(70);
+            }
+          }
+        }
+        
+        @include mq(sp) {
+          width: vw(80);
+          border-radius: vw(40);
+          margin-top: vw(2.8);
+          
+          img {
+            border-radius: vw(40);
+          }
+        }
+      }
+      
+      &-right {
+        display: table-cell;
+        vertical-align: middle;
+        
+        @include mq(pc) {
+          padding-left: remPC(24.4);
+        }
+        
+        @include mq(sp) {
+          padding-left: vw(11.42);
+        }
+      }
+      
+      &-info {
+        font-family: $kozgo_pr6n_r;
+        
+        @include mq(pc) {
+          color: #050404;
+          margin-top: remPC(9);
+          margin-left: remPC(2);
+          font-size: remPC(15);
+          line-height: remPC(28);
+        }
+        
+        @include mq(sp) {
+          color: #070304;
+          font-size: vw(12);
+          line-height: vw(18);
+        }
+        
+        .small {
+          @include mq(pc) {
+            font-size: remPC(12);
+          }
+        }
+      }
+      
+      &-name {
+        font-family: $kozgo_pr6n_b;
+        
+        @include mq(pc) {
+          font-size: remPC(18);
+          line-height: remPC(24);
+          padding-bottom: remPC(12.68);
+          
+          .small {
+            @include mq(pc) {
+              font-size: remPC(12);
+            }
+          }
+        }
+        
+        @include mq(sp) {
+          font-size: vw(15);
+          line-height: vw(20);
+          padding-bottom: vw(3.68);
+          
+          .small {
+            @include mq(sp) {
+              font-size: vw(11);
+            }
+          }
+        }
+      }
+    }
+    
+    &-content {
+      @include mq(pc) {
+        padding: remPC(31.26) remPC(20) remPC(32.53);
+        max-width: remPC(680);
+        margin: 0 auto;
+      }
+      
+      @include mq(sp) {
+        padding: vw(37.6) vw(20) vw(95.68);
+      }
+      
+      .wp-block-group {
+        @include mq(pc) {
+          padding-bottom: remPC(73.89);
+        }
+        
+        @include mq(sp) {
+          padding-bottom: vw(50.6);
+        }
+        
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+      
+      h3 {
+        width: fit-content;
+        font-family: $yugo_b;
+        margin-top: 0;
+        
+        @include mq(pc) {
+          color: #050404;
+          padding: 0 remPC(40) 0 remPC(5);
+          background: linear-gradient(to bottom, transparent remPC(16), #E9D027 remPC(16));
+          font-size: remPC(20);
+          line-height: remPC(28);
+          margin-bottom: remPC(9.6);
+        }
+        
+        @include mq(sp) {
+          color: #070304;
+          padding: 0 vw(40) 0 vw(5);
+          background: linear-gradient(to bottom, transparent vw(16), #E9D027 vw(16));
+          font-size: vw(20);
+          line-height: vw(28);
+          margin-bottom: vw(8);
+        }
+      }
+      
+      p {
+        font-family: $yugo_m;
+        
+        @include mq(pc) {
+          color: #1F191C;
+          font-size: remPC(14);
+          line-height: remPC(22.4);
+          margin-top: remPC(17.12);
+        }
+        
+        @include mq(sp) {
+          color: #262727;
+          font-size: vw(14);
+          line-height: vw(22.4);
+          margin-top: vw(17.12);
+        }
+      }
+      
+      .wp-block-image {
+        @include mq(pc) {
+          margin-top: remPC(72.94);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(97.48);
+        }
+        
+        figcaption {
+          text-align: center;
+          font-family: $yugo_m;
+          margin-bottom: 0;
+          
+          @include mq(pc) {
+            color: #372D32;
+            margin-top: remPC(9.77);
+            font-size: remPC(14);
+            line-height: remPC(19);
+          }
+          
+          @include mq(sp) {
+            background: #FFF;
+            color: #3D3C3D;
+            margin-top: 0;
+            font-size: vw(14);
+            line-height: vw(19);
+            padding: vw(8.5);
+          }
+        }
+      }
+      
+      .wp-block-embed-youtube {
+        font-size: 0;
+        
+        @include mq(pc) {
+          margin-top: remPC(53.77);
+        }
+        
+        @include mq(sp) {
+          margin-top: vw(98.68);
+        }
+        
+        iframe {
+          width: 100%;
+        }
+        
+        figcaption {
+          text-align: center;
+          font-family: $yugo_m;
+          margin-bottom: 0;
+          
+          @include mq(pc) {
+            color: #372D32;
+            margin-top: remPC(9.77);
+            font-size: remPC(14);
+            line-height: remPC(19);
+          }
+          
+          @include mq(sp) {
+            background: #FFF;
+            color: #3D3C3D;
+            margin-top: 0;
+            font-size: vw(14);
+            line-height: vw(19);
+            padding: vw(8.5);
+          }
+        }
+      }
+    }
+    
+    &-button {
+      overflow: hidden;
+      
+      @include mq(pc) {
+        padding: 0 remPC(20) remPC(59.22);
+        max-width: remPC(680);
+        margin: 0 auto;
+      }
+      
+      @include mq(sp) {
+        padding: 0 vw(32.11) vw(37.19);
+      }
+    }
+    
+    &-right {
+      @include mq(pc) {
+        width: 30%;
+        padding-left: remPC(40);
+        float: right;
+      }
+      
+      @include mq(sp) {
+        display: none;
+      }
+      
+      &-block {
+        @include mq(pc) {
+          background: #FFF;
+          border-radius: remPC(10);
+          font-size: 0;
+          margin-bottom: remPC(39);
+        }
+        
+        img {
+          border-radius: remPC(10);
+        }
+      }
+    }
+    
+    &-archive {
+      @include mq(pc) {
+        padding: remPC(20) remPC(25);
+      }
+      
+      &-title {
+        @include mq(pc) {
+          font-family: $kozgo_pr6n_b;
+          font-size: remPC(18);
+          line-height: remPC(42);
+          border-bottom: 1px double #dddddd;
+          text-align: center;
+        }
+      }
+      
+      &-item {
+        @include mq(pc) {
+          margin-top: remPC(20);
+          font-family: $kozgo_pr6n_r;
+        }
+      }
+      
+      &-handle {
+        @include mq(pc) {
+          overflow: hidden;
+        }
+      }
+      
+      &-button {
+        @include mq(pc) {
+          display: inline-block;
+          position: relative;
+          width: remPC(12);
+          height: remPC(12);
+          margin-top: remPC(8);
+          margin-right: remPC(6);
+          cursor: pointer;
+        }
+        
+        &:before {
+          @include mq(pc) {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            border-left: remPC(12) solid #909090;
+            border-top: remPC(6) solid transparent;
+            border-bottom: remPC(6) solid transparent;
+          }
+        }
+        
+        &.active {
+          &:before {
+            @include mq(pc) {
+              border-left: remPC(6) solid transparent;
+              border-right: remPC(6) solid transparent;
+              border-top: remPC(12) solid #909090;
+            }
+          }
+        }
+      }
+      
+      &-year {
+        @include mq(pc) {
+          font-family: $kozgo_pr6n_r;
+          display: inline-block;
+          font-size: remPC(14);
+          line-height: remPC(28);
+        }
+      }
+      
+      &-list {
+        display: none;
+      }
+      
+      &-month {
+        @include mq(pc) {
+          font-family: $kozgo_pr6n_r;
+          font-size: remPC(14);
+          line-height: remPC(28);
+          padding-left: remPC(45);
+        }
+      }
+    }
+  }
+  
+  &-item {
+    @include mq(pc) {
+      background: #F5F0CB;
+      padding: remPC(23.07) remPC(40) remPC(79.14);
+    }
+    
+    @include mq(sp) {
+      background: #F9F0D1;
+      padding: vw(57.92) vw(20) vw(50);
+    }
+    
+    &-inner {
+      @include mq(pc) {
+        max-width: remPC(1200);
+        margin: 0 auto;
+        padding-right: 30%;
+      }
+    }
+    
+    &-area {
+      position: relative;
+      
+      @include mq(pc) {
+        border-top: 1px solid #050404;
+        padding-top: remPC(17.93);
+      }
+      
+      @include mq(sp) {
+        border-top: 1px solid #070304;
+        padding: vw(33.44) vw(4.5) 0;
+      }
+    }
+    
+    &-topic {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: $futura_pt_b;
+      text-align: center;
+      
+      @include mq(pc) {
+        background: #F5F0CB;
+        width: remPC(108);
+        font-size: remPC(32);
+        line-height: remPC(41);
+        top: remPC(-23.07);
+      }
+      
+      @include mq(sp) {
+        background: #F9F0D1;
+        width: vw(108);
+        font-size: vw(32);
+        line-height: vw(41);
+        top: vw(-23.07);
+      }
+    }
+    
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    &-item {
+      @include mq(pc) {
+        width: calc(25% - 33.75px);
+        margin-top: remPC(31.4);
+        margin-left: remPC(45);
+      }
+      
+      @include mq(tb) {
+        width: calc(25% - 27px);
+      }
+      
+      @include mq(sp) {
+        width: vw(150);
+        margin-top: vw(20.3);
+        margin-left: vw(26);
+      }
+      
+      &:nth-child(4n+1) {
+        @include mq(pc) {
+          margin-left: 0;
+        }
+      }
+      
+      &:nth-child(2n+1) {
+        @include mq(sp) {
+          margin-left: 0;
+        }
+      }
+    }
+    
+    &-image {
+      position: relative;
+      background: #FFF;
+      overflow: hidden;
+      
+      @include mq(pc) {
+        border-radius: remPC(10);
+        width: 100%;
+        height: remPC(175);
+      }
+      
+      @include mq(sp) {
+        border-radius: vw(10);
+        width: vw(150);
+        height: vw(150);
+      }
+      
+      img {
+        width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        @include mq(tb) {
+          transform: translate(-50%, -50%) scale(0.8, 0.8);
+        }
+        
+        @include mq(sp) {
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    
+    &-title {
+      font-family: $yugo_b;
+      
+      @include mq(pc) {
+        color: #1F191C;
+        font-size: remPC(16.33);
+        line-height: remPC(22);
+        margin-top: remPC(17.45);
+      }
+      
+      @include mq(sp) {
+        color: #262727;
+        font-size: vw(14);
+        line-height: vw(19);
+        margin-top: vw(14.95);
+      }
+    }
+    
+    &-price {
+      font-family: $yugo_b;
+      
+      @include mq(pc) {
+        color: #EA4241;
+        font-size: remPC(15.17);
+        line-height: remPC(24.5);
+      }
+      
+      @include mq(sp) {
+        color: #D84A42;
+        font-size: vw(13);
+        line-height: vw(21);
+      }
+    }
+  }
+  
+  &-event {
+    background: #FFF;
+    
+    @include mq(pc) {
+      padding: remPC(101.93) remPC(40) remPC(79.14);
+    }
+    
+    @include mq(sp) {
+      padding: vw(57.92) vw(20) vw(50);
+    }
+    
+    &-inner {
+      @include mq(pc) {
+        max-width: remPC(1200);
+        margin: 0 auto;
+        padding-right: 30%;
+      }
+    }
+    
+    &-area {
+      position: relative;
+      
+      @include mq(pc) {
+        border-top: 1px solid #050404;
+        padding-top: remPC(17.93);
+      }
+      
+      @include mq(sp) {
+        border-top: 1px solid #070304;
+        padding: vw(33.44) vw(4.5) 0;
+      }
+    }
+    
+    &-topic {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: $futura_pt_b;
+      text-align: center;
+      background: #FFF;
+      
+      @include mq(pc) {
+        width: remPC(118);
+        font-size: remPC(32);
+        line-height: remPC(41);
+        top: remPC(-23.07);
+      }
+      
+      @include mq(sp) {
+        width: vw(118);
+        font-size: vw(32);
+        line-height: vw(41);
+        top: vw(-23.07);
+      }
+    }
+    
+    &-list {
+      @include mq(pc) {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 remPC(40);
+      }
+    }
+    
+    &-item {
+      padding-top: 1px;
+      
+      @include mq(pc) {
+        width: calc(50% - 45px);
+        margin-top: remPC(31.4);
+        margin-left: remPC(90);
+      }
+      
+      @include mq(tb) {
+        width: calc(50% - 36px);
+      }
+      
+      @include mq(sp) {
+        width: 100%;
+        margin-top: vw(20.3);
+      }
+      
+      &:nth-child(2n+1) {
+        @include mq(pc) {
+          margin-left: 0;
+        }
+      }
+    }
+    
+    &-image {
+      position: relative;
+      background-image: url('../../assets/img/single/event-bg.jpg');
+      background-repeat: repeat;
+      
+      @include mq(pc) {
+        height: remPC(200);
+        margin-top: remPC(20);
+        margin-left: remPC(20);
+        background-size: remPC(16);
+      }
+      
+      @include mq(sp) {
+        width: vw(315);
+        height: vw(200);
+        margin-top: vw(20);
+        margin-left: vw(20);
+        background-size: vw(16);
+      }
+      
+      &-inner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        
+        @include mq(pc) {
+          top: remPC(-20);
+          left: remPC(-20);
+        }
+        
+        @include mq(sp) {
+          top: vw(-20);
+          left: vw(-20);
+        }
+      }
+      
+      img {
+        position: absolute;
+        width: auto;
+        max-width: unset;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    
+    &-title {
+      font-family: $kozgo_pr6n_b;
+      
+      @include mq(pc) {
+        color: #050404;
+        font-size: remPC(20);
+        line-height: remPC(23);
+        margin-top: remPC(21.3);
+      }
+      
+      @include mq(sp) {
+        color: #070304;
+        font-size: vw(20);
+        line-height: vw(23);
+        margin-top: vw(21.24);
+      }
+    }
+  }
+}
